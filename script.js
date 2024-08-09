@@ -44,8 +44,10 @@ window.getInformation = getInformation;
 
 function setResponse() {
     const region_info = "Weather in " + location + ", " + region + ", " + country + ": "; 
-    const weather_info = "Currently " + weather + ", feels like " + feelslike + ". "; 
+    const weather_info = weather + ", feels like " + feelslike + ". "; 
 
     document.querySelector(".region_display").innerText = region_info; 
     document.querySelector(".weather_display").innerText = weather_info; 
 }
+
+
