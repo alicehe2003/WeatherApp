@@ -32,6 +32,8 @@ export function getInformation(event) {
         console.log("Country:", country); 
         console.log("Weather:", weather); 
         console.log("Feels like:", feelslike); 
+
+        setResponse(); 
     })
     .catch(function(error) {
         console.error("Error: ", error); 
@@ -40,3 +42,10 @@ export function getInformation(event) {
 
 window.getInformation = getInformation; 
 
+function setResponse() {
+    const region_info = "Weather in " + location + ", " + region + ", " + country + ": "; 
+    const weather_info = "Currently " + weather + ", feels like " + feelslike + ". "; 
+
+    document.querySelector(".region_display").innerText = region_info; 
+    document.querySelector(".weather_display").innerText = weather_info; 
+}
