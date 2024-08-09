@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Weather App</title>
 </head>
 <body>
+    <h1>Weather App</h1> 
+    <div class="content">
+        <p>Find out about the weather right now!</p>
+        <form id="form" onsubmit="getInformation(event)">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required/>
+            <input type="submit" value="Submit"/>
+        </form>
 
-
+        <div class="display">
+            <div class="region_info"></div>
+            <div class="weather"></div>
+            <div class="feels_like"></div>
+        </div>
+    </div>
 
     <script type="module" src="./script.js"></script>
 </body>
